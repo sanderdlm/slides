@@ -26,7 +26,7 @@ body {
     color: var(--mine-shaft);
     font-size: 2.5rem;
     line-height: 1.5;
-    overflow-y: hidden;
+    overflow-y: scroll;
 }
 
 h1, h2, h3, h4, h5 {
@@ -46,7 +46,11 @@ ul {
 }
 
 img {
-    max-width: 25%;
+    max-width: 35%;
+}
+
+blockquote {
+    font-style: italic;
 }
 
 /* Slides */

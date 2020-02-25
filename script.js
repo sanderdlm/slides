@@ -4,7 +4,6 @@ let current = 0;
 let target = null;
 
 document.addEventListener('keydown', (event) => {
-	
 	if (event.keyCode === 38) {
 		event.preventDefault();
 
