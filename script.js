@@ -1,30 +1,67 @@
-const sections = document.querySelectorAll('section');
-const last = sections.length;
-let current = 0;
-let target = null;
+class Slide  {
+	constructor () {
+		this.sections = document.querySelectorAll('section')
+		this.last = this.sections.length - 1
+		this.current = 0
+		this.target = null
 
-document.addEventListener('keydown', (event) => {
-	if (event.keyCode === 38) {
-		event.preventDefault();
-
-		//scroll up
-		if (current > 0) {
-			current--;
-		}	
+		this.onKeyDown()
 	}
 
-	if (event.keyCode === 40) {
-		event.preventDefault();
+	onKeyDown() {
+		document.addEventListener('keydown', (event) => {
+			if (
+				event.code === 'ArrowLeft' ||
+				event.code === 'ArrowUp'
+			) {
+				event.preventDefault();
+				this.#goToPreviousSlide()
+			}
 
-		//scroll down
-		if (current < last - 1) {
-			current++;
+			if (
+				event.code === 'ArrowRight' ||
+				event.code === 'ArrowDown' ||
+				event.code === 'Space'
+			) {
+				event.preventDefault();
+				this.#goToNextSlide()
+			}
+
+			if (event.code.includes('Digit')) {
+				event.preventDefault();
+				this.#goToSlide(event.key)
+			}
+		})
+	}
+
+	#goToPreviousSlide() {
+		if (this.current > 0) {
+			this.current--;
+		}
+
+		this.#scroll()
+	}
+
+	#goToNextSlide() {
+		if (this.current < this.last) {
+			this.current++;
+		}
+
+		this.#scroll()
+	}
+
+	#goToSlide(key) {
+		this.current = key - 1
+		this.#scroll()
+	}
+
+	#scroll() {
+		this.target = this.sections[this.current];
+
+		if (this.target) {
+			this.target.scrollIntoView({ behavior: 'smooth', block: 'center' });
 		}
 	}
+}
 
-	target = sections[current];
-
-	if (target) {
-		target.scrollIntoView();
-	}
-});
+new Slide()

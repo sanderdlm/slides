@@ -3,101 +3,101 @@
 <head>
     <meta charset="utf-8">
     <title>sql-ite</title>
-    <meta name="description" content="">
-    <meta name="author" content="Sander">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
 </head>
 <body>
-	<section>
-		<h1>SQLite</h1>
-		<ul>
-			<li>Wat?</li>
-			<li>Single file, transactional SQL database engine geschreven in C</li>
-		</ul>
-		<img src="wow.webp" />
-	</section>
-	<section>
-		<h2>"Most Widely Deployed and Used Database Engine (in the world)"</h2>
-		<ul>
-			<li>Every Android device</li>
-			<li>Every Mac, iPhone and iOS device</li>
-			<li>Every Windows10 machine</li>
-			<li>Every Firefox, Chrome, and Safari web browser</li>
-			<li>Every instance of Dropbox, Skype, iTunes, Aperture, Mail</li>
-		</ul>
-		<a href="https://www.sqlite.org/mostdeployed.html" target="_blank">Source</a>
-	</section>
-	<section>
-		<h1>Profit: 0$</h1>
-		<p>Public domain?</p>
-		<blockquote>"The author disclaims copyright to this source code. In place of a legal notice, here is a blessing: may you do good and not evil. May you find forgiveness for yourself and forgive others. May you share freely, never taking more than you give."</blockquote>
-	</section>
-	<section>
-		<h2>History</h2>
-		<ul>
-			<li>Richard Hipp</li>
-			<li>May 29, 2000 -> GnuDBM hashing-based DB</li>
-			<li>2001 -> B-tree based Sqlite2</li>
-			<li>2004 - Sqlite3</li>
-			<li>Airbus, A350 -> 2050</li>
-		</ul>
-	</section>
-	<section>
-		<h2>Features</h2>
-		<ul>
-			<li>C, dus cross-platform</li>
-			<li>100% open-source</li>
-			<li>ACID compliant</li>
-			<li>Uitgebreid getest (meer tests dan source code)</li>
-			<li>Stabiel & LTS</li>
-			<li>Small: 600kb</li>
-			<li>Gemakkelijk backup/deploy want 1 file</li>
-		</ul>
-	</section>
-	<section>
-		<h2>Limits & myths</h2>
-		<ul>
-			<li>1 writer per keer</li>
-			<li>5 seconden PENDING default</li>
-			<li>Concurrency -> Write ahead log (WAL)</li>
-			<li>50,000 inserts/s</li>
-			<li>Corrupt -> automatische rollback</li>
-			<li>140TB - 1GB</li>
-		</ul>
-		<p>> Key is het aantal gebruikers</p>
-	</section>
-	<section>
-		<h2>Use cases</h2>
-		<ul>
-			<li>Embedded</li>
-			<li>Scripting & kleine tools -> JSON of YAML 🤮</li>
-			<li>Websites?
-				<ul>
-					<li>100-500k request/day</li>
-					<li>Doctrine -> pdo_sqlite</li>
-				</ul>
-			</li>
-			<li>SQLitebrowser</li>
-		</ul>
-	</section>
-	<section>
-		<h2>Slechte kanten</h2>
-		<ul>
-			<li>(very) dynamic typing. It's a feature.</li>
-			<li>Niet 100% backwards compatible met MySQL -> tools & scripts</li>
-		</ul>
-		<img src="frustration.jpg" />
-	</section>
-	<section>
-		<p>Deze presentatie</p>
-		<ul>
-			<li>80 lijnen CSS + 30 lijnen JS</li>
-			<li>100vh section elements met flexbox</li>
-			<li>querySelectorAll -> arrow keys -> scrollIntoView</li>
-			<li>Goed? nee. Goed genoeg? Ja.</li>
-		</ul>
-	</section>
+	<main>
+		<section>
+			<h1>SQLite</h1>
+			<ul>
+				<li>Wat?</li>
+				<li>Single file, transactional SQL database engine geschreven in C</li>
+			</ul>
+			<img src="wow.webp" />
+		</section>
+		<section>
+			<h2>"Most Widely Deployed and Used Database Engine (in the world)"</h2>
+			<ul>
+				<li>Every Android device</li>
+				<li>Every Mac, iPhone and iOS device</li>
+				<li>Every Windows10 machine</li>
+				<li>Every Firefox, Chrome, and Safari web browser</li>
+				<li>Every instance of Dropbox, Skype, iTunes, Aperture, Mail</li>
+			</ul>
+			<a href="https://www.sqlite.org/mostdeployed.html" target="_blank">Source</a>
+		</section>
+		<section>
+			<h1>Profit: 0$</h1>
+			<p>Public domain?</p>
+			<blockquote>"The author disclaims copyright to this source code. In place of a legal notice, here is a blessing: may you do good and not evil. May you find forgiveness for yourself and forgive others. May you share freely, never taking more than you give."</blockquote>
+		</section>
+		<section>
+			<h2>History</h2>
+			<ul>
+				<li>Richard Hipp</li>
+				<li>May 29, 2000 -> GnuDBM hashing-based DB</li>
+				<li>2001 -> B-tree based Sqlite2</li>
+				<li>2004 - Sqlite3</li>
+				<li>Airbus, A350 -> 2050</li>
+			</ul>
+		</section>
+		<section>
+			<h2>Features</h2>
+			<ul>
+				<li>C, dus cross-platform</li>
+				<li>100% open-source</li>
+				<li>ACID compliant</li>
+				<li>Uitgebreid getest (meer tests dan source code)</li>
+				<li>Stabiel & LTS</li>
+				<li>Small: 600kb</li>
+				<li>Gemakkelijk backup/deploy want 1 file</li>
+			</ul>
+		</section>
+		<section>
+			<h2>Limits & myths</h2>
+			<ul>
+				<li>1 writer per keer</li>
+				<li>5 seconden PENDING default</li>
+				<li>Concurrency -> Write ahead log (WAL)</li>
+				<li>50,000 inserts/s</li>
+				<li>Corrupt -> automatische rollback</li>
+				<li>140TB - 1GB</li>
+			</ul>
+			<p>> Key is het aantal gebruikers</p>
+		</section>
+		<section>
+			<h2>Use cases</h2>
+			<ul>
+				<li>Embedded</li>
+				<li>Scripting & kleine tools -> JSON of YAML 🤮</li>
+				<li>Websites?
+					<ul>
+						<li>100-500k request/day</li>
+						<li>Doctrine -> pdo_sqlite</li>
+					</ul>
+				</li>
+				<li>SQLitebrowser</li>
+			</ul>
+		</section>
+		<section>
+			<h2>Slechte kanten</h2>
+			<ul>
+				<li>(very) dynamic typing. It's a feature.</li>
+				<li>Niet 100% backwards compatible met MySQL -> tools & scripts</li>
+			</ul>
+			<img src="frustration.jpg" />
+		</section>
+		<section>
+			<p>Deze presentatie</p>
+			<ul>
+				<li>80 lijnen CSS + 30 lijnen JS</li>
+				<li>100vh section elements met flexbox</li>
+				<li>querySelectorAll -> arrow keys -> scrollIntoView</li>
+				<li>Goed? nee. Goed genoeg? Ja.</li>
+			</ul>
+		</section>
+	</main>
 </body>
 </html>
